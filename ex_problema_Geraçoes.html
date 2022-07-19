@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function mostrarTitulo(titulo) {
+            document.write("<h1>" + titulo +"</h1>")
+        }
+        function pulaLinha() {
+            document.write("<br>")
+        }
+        function mostra(frase) {
+            document.write(frase)
+        }
+        
+        var anoAtual = 2022
+        var idadeMediaQuandoTemFilhos = 28
+        var quantidadeDeGeraçoes = (anoAtual - 1500)/idadeMediaQuandoTemFilhos
+        
+        mostrarTitulo("Calcule quantas gerações se passaram depois da chegada dos portugueses");
+
+        mostra("Os portugueses chegaram no Brasil em 1500.");
+
+        pulaLinha();
+
+        mostra("Em média, um casal tem filhos quando atinge a idade de 28 anos.");
+
+        pulaLinha();
+
+        mostra("Já são em média "  + quantidadeDeGeraçoes + " gerações de portugues desde a chegada no Brasil no ano de 1.500.");
+
+    </script>
+</body>
+</html>

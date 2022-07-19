@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write('Flávio nasceu em ' + (2016 -39) + '<br>');
+        document.write('Joaquim nasceu em ' + (2016-20) + '<br>');
+        document.write('Barney nasceu em ' + (2016 - 40));
+        document.write('<br><br>');
+
+        var ano = 2022;
+
+        document.write('Flávio tem '+ (ano - 1977) + ' anos' + '<br>');
+        document.write('Joaquim tem ' + (ano - 1996)+ ' anos' + '<br>');
+        document.write('Barney tem ' + (ano - 1976) + ' anos');
+
+        document.write('<br>');
+
+        var idadeFlavio = ano - 1977;
+        var idadeJoaquim = ano - 1996;
+        var idadeBarney = ano - 1976;
+
+        var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+
+        document.write('A média das idades é ' + Math.round(media)); //Math.round() Serve para arrendondar o valor
+
+        var nome = 'Flávio'
+        document.write('<br> A idade de ' + nome + ' é ' + idadeFlavio)
+        
+    </script>
+</body>
+</html>
