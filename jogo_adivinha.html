@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Jogo de 1 a 10.</h1>
+
+    <script>
+
+        function pulaLinha(){
+            document.write("<br><br>")
+        }
+
+        function mostra(frase){
+            document.write(frase)
+            pulaLinha()
+        }
+
+        var numeroPensado = Math.round(Math.random() * 10);
+
+        //Math.random() sorteia um número e multiplica de acordo com o número desejado.ex: se quisesse de 0 a 1000 multiplicava por 100. E o Math.round() arredonda.
+        
+        /*
+        var contador = 1
+        var tentativaMaxima = 3
+
+        while(contador <= tentativaMaxima){
+            contador++
+            var chute = parseInt(prompt("De 1 a 10. Digite seu chute! Tente acertar em 3 tentativas."));
+
+            if(chute == numeroPensado){
+                mostra("Você acertou!");
+                contador = contador + tentativaMaxima
+            } else {
+                if(contador <= tentativaMaxima){
+                    alert("Tente mais uma vez")
+                } else {
+                    mostra("Encerrou seu número de tentativas. Você perdeu!");
+                } 
+            }
+
+           
+        }
+        */
+
+        var numeroTentivas = 3
+        
+        for(var contador = 1; contador <= numeroTentivas; contador++){
+            var chute = parseInt(prompt("De 1 a 10. Digite seu chute! Tente acertar em 3 tentativas."));
+
+            if(chute == numeroPensado) {
+                mostra("Parabéns! Você acertou!");
+                break; //break encerra logo.
+            } else {
+                if(contador < numeroTentivas){
+                    alert("Errou, tente mais uma vez.");
+                } else {
+                    mostra("Encerrou o seu número de tentativas. Você perdeu!");
+                }
+            }
+        }
+        mostra("Fim!")
+       
+    </script>
+    
+</body>
+</html>

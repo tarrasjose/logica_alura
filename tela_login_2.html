@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var loginCadastrado = "tarras";
+        var senhaCadastrada = "t123";
+        var tentativaAtual = 1;
+        var maximoTentativas = 3;
+
+        while(tentativaAtual <= maximoTentativas){
+            var loginInformado = prompt("Digite seu login");
+            var senhaInformada = prompt("Digite sua senha");
+            
+            if(loginInformado == loginCadastrado && senhaInformada == senhaCadastrada) {
+                alert("Bem-vindo ao sistema " + loginInformado);
+                tentativaAtual = maximoTentativas;
+            } else {
+                if(tentativaAtual == maximoTentativas){
+                    alert("Número permitido de tentativas ultrapassado.");
+                } else {
+                    alert("Login inválido. Tente novamente!");
+                }
+            }
+
+            tentativaAtual = tentativaAtual + 1;
+        }
+    </script>
+    
+</body>
+</html>

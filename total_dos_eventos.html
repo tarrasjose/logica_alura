@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Média de valor gasto por evento</h1>
+    
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var contador = 1;
+        var totalEventos = parseInt(prompt("Digite o total de eventos do mês"));
+
+        var somaDoGastoEventos = 0;   
+        
+        while(contador <= totalEventos){
+            var gastoPorEvento = parseInt(prompt("Digite o gasto por evento"));
+            somaDoGastoEventos = somaDoGastoEventos + gastoPorEvento;
+            contador++;
+        }
+
+        var media = somaDoGastoEventos / totalEventos;
+
+        mostra("No mês atual teve um total de " + totalEventos + " eventos. A média do gasto por evento foi: " + Math.round(media) + " reais");
+
+        
+    </script>
+</body>
+</html>

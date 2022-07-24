@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input/>
+    
+    <button>Compare com o meu segredo</button>
+
+    <script>
+
+        var segredos = [2,3,4];
+
+        var inp = document.querySelector("input");
+        
+        var button = document.querySelector("button");
+        button.onclick = verificar;
+        inp.focus()
+        
+
+        function verificar(){
+            var achou = false;
+
+            for(var posição = 0; posição < segredos.length; posição++){
+
+                if(inp.value == segredos[posição]){
+                    alert("Acertou!!!");
+                    achou = true;
+                }
+            }
+
+            if(achou == false){
+                alert("Você errou!!!");
+            }
+            
+                inp.value = "";
+                inp.focus();
+                
+            }
+            
+        
+
+        
+        
+
+    </script>
+    
+</body>
+</html>

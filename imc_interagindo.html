@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function mostraTitulo(titulo) {
+            document.write("<h2>" + titulo + "</h2>")
+        }
+
+        function pulaLinha() {
+            document.write("<br><br>")
+        }
+
+        function mostra(frase) {
+            document.write(frase)
+            pulaLinha()
+        }
+    
+        function calculaImc(altura, peso) {
+            return peso / (altura * altura)
+        }
+
+        var nome = prompt("Olá, informe seu nome")
+        var alturaInformada = prompt(nome + ", Informe sua altura")
+        var pesoInformado = prompt(nome +", Informe seu peso")
+
+        var imc = calculaImc(alturaInformada, pesoInformado);
+
+        mostraTitulo("IMC")
+
+        mostra(nome + ", o seu IMC é: " + imc)
+
+        if(imc <= 17) {
+            mostra(nome + ", você está muito abaixo do peso.")
+        } else if(imc <= 18.49) {
+            mostra(nome + ", você está abaixo do peso.")
+        } else if(imc <= 24.99) {
+            mostra(nome + ", você está com peso normal.")
+        } else if (imc >= 25){
+            mostra(nome + ", você está com obesisidade.")
+        }
+    </script>
+</body>
+</html>

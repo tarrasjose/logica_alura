@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+
+    <SCript>
+        function mostraTitulo(frase){
+            document.write("<h1>" + frase + "</h1>");
+        }
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(altura, peso){
+            return peso / (altura * altura);
+        }
+
+        var imcFlavio = calculaImc(1.80, 80);
+        var imcAmigo = calculaImc(1.90, 100);
+        var totalImc = imcFlavio + imcAmigo;
+
+        //var totalImc = calculaImc(1.80, 80) + calculaImc(1.90, 100) Se fosse somente o calculo da soma dos imcs bastaria isso
+
+        mostraTitulo("IMC");
+
+        mostra("O IMC de Flávio é: " + imcFlavio);
+
+        mostra("O IMC de Amigo é: " + imcAmigo);
+
+        mostra("A soma dos imc's de Flávio e seu amigo é: " + totalImc);
+
+        //Outra forma que o return funcionaria
+        mostra("O IMC calculado é " + calculaImc(1.78, 80))
+    </SCript>
+    
+</body>
+</html>

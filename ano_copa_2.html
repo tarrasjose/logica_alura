@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos de copa</title>
+</head>
+<body>
+    <h2>Pesquise quantas copa do mundo teve até o ano pretendido</h2>
+
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var anoCopa = 1930;
+        var limite = parseInt(prompt("Qual o ano limite?"));
+
+        var contador = 1;
+
+        while(contador <= anoCopa.length) {
+            contador = contador + 1;
+        }
+
+        while(anoCopa <= limite) {
+            mostra(contador + " - " + anoCopa);
+            anoCopa = anoCopa + 4;
+            contador = contador + 1;
+        }
+
+        mostra("Ufa! Esses foram os anos de copa do mundo até " + limite);
+    </script>
+    
+</body>
+</html>

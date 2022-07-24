@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Mostrar números de 30 a 40, excluindo o 33 e 37</h2>
+
+    <script>
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var contador = 30;
+        
+        while(contador <= 40){
+            if(contador != 33 && contador != 37 ) {
+                mostra(contador);
+            }
+            contador = contador + 1
+        }
+        mostra("Fim!")
+        
+        /*
+        while(contador <= 40){
+            if(contador == 33) {
+                contador = contador + 1;
+            } else if (contador == 37) {
+                contador = contador + 1;
+            } else {
+                mostra(contador);
+                contador = contador + 1;
+                
+            }
+        }
+        */
+    </script>
+    
+</body>
+</html>

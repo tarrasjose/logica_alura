@@ -7,22 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Números pares até 100</h1>
 
     <script>
-        function pulaLinha() {
-            document.write("<br><hr><br>");
+        function pulaLinha(){
+            document.write("<br><br>");
         }
+
         function mostra(frase){
-            document.write("<big>" + frase  + "<big>");
+            document.write(frase);
             pulaLinha();
         }
 
-        var anoAtual = 2022
-        
-        mostra("Eu nasci em: " + (anoAtual - 31));
-        mostra("Adriano nasceu em: " + (anoAtual - 26))
-        mostra("Paulo nasceu em: " + (anoAtual - 32))
+        var contador = 2
 
+        while(contador <= 100) {
+            mostra(contador);
+            contador = contador + 2;
+        }
+
+        mostra("Fim!");
     </script>
     
 </body>
